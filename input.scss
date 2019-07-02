@@ -38,6 +38,12 @@ $paragraphColor: #4f4f4f;
   opacity: $opacity;
 }
 
+// @mixin feedback($fontSize, $lineHeight, $Color) {
+//   font-size: $fontSize;
+//   line-height: $lineHeight;
+//   color: $Color;
+// } 
+
 body {
     margin: 0;
     font-family: $fontFamilly;
@@ -361,7 +367,59 @@ body {
 }
 
 .carousel {
-  text-align: center;
+  // text-align: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.carousel_blocks {
+  max-width: 309px !important;
+  height: 161px;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  padding: 15px;
+  // margin: 20px;
+}
+
+.carousel_blocks_inner {
+  display: flex;
+}
+
+.slick-slide {
+  margin: 20px;
+}
+
+.slick-next,
+.slick-prev {
+  width: 47px !important;
+  height: 47px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: $primaryColor !important;
+  font-size: 47px !important;
+}
+
+// .icon {
+//   flex: 10%;
+// }
+
+// .avatar {
+//   flex: 20%;
+// }
+
+.name {
+  @include paragraphSize(16px, 19px);
+  font-weight: bold;
+  color: #333;
+  flex: 70%;
+  margin-left: 11px;
+}
+
+.feedback_content {
+  @include paragraphSize(14px, 18px);
+  color: #4F4F4F;
+  margin: 0;
 }
 
 .featured_in {
@@ -448,6 +506,7 @@ body {
 .links a:last-child {
   margin-right: 0;
 }
+
 
 @media (min-width: 640px) and (max-width: 1023px) {
    .header_inner p,
