@@ -387,7 +387,51 @@ body {
 }
 
 .carousel {
-  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.carousel_blocks {
+  max-width: 309px !important;
+  height: 161px;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.carousel_blocks_inner {
+  display: flex;
+}
+
+.slick-slide {
+  margin: 20px;
+}
+
+.slick-next,
+.slick-prev {
+  width: 47px !important;
+  height: 47px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #00ADEE !important;
+  font-size: 47px !important;
+}
+
+.name {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  color: #333;
+  flex: 70%;
+  margin-left: 11px;
+}
+
+.feedback_content {
+  font-size: 14px;
+  line-height: 18px;
+  color: #4F4F4F;
+  margin: 0;
 }
 
 .featured_in {

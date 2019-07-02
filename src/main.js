@@ -1,36 +1,38 @@
 $(document).ready(function(){
     $('.carousel').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         centerMode: true,
         centerPadding: '60px',
-        arrows: true,
         speed: 300,
+        arrows: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         adaptiveHeight: true,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1224,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
+              slidesToShow: 2,
+              slidesToScroll: 1,
               infinite: true,
               dots: true
             }
           },
           {
-            breakpoint: 600,
+            breakpoint: 640,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              centerMode: false
             }
           },
           {
-            breakpoint: 480,
+            breakpoint: 360,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              centerMode: false,
             }
           }
           // You can unslick at a given breakpoint now by adding:
@@ -39,3 +41,5 @@ $(document).ready(function(){
         ]
     });
   });
+
+  
