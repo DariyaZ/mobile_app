@@ -1,0 +1,850 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #F4F6F9;
+}
+
+.header_inner {
+  padding: 0 20px;
+  padding-top: 32px;
+  padding-bottom: 60px;
+}
+
+.header_inner p {
+  text-align: center;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 86px;
+}
+
+.store_links {
+  text-align: center;
+}
+
+.store_links a:first-child {
+  margin-right: 30px;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.achieve_status {
+  margin-bottom: 50px;
+  margin-top: 33px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #4f4f4f;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  padding: 54px 20px 22px 20px;
+  text-align: center;
+}
+
+.what_it_does,
+.get_started {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #00ADEE;
+}
+
+.football_exp {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 37px;
+  color: #333;
+}
+
+.app_purpose,
+.subscribe {
+  font-size: 16px;
+  line-height: 23px;
+  color: #4f4f4f;
+}
+
+.learn_more {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #00ADEE;
+}
+
+.frames {
+  background: url(images/Ronaldo_mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 70px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.information_card {
+  width: 70%;
+  max-width: 360px;
+  box-shadow: -15.1278px 16.3884px 33.6173px rgba(0, 0, 0, 0.5);
+  border-radius: 2.74531px;
+  z-index: 2;
+  background-color: #fff;
+  position: relative;
+  right: 50px;
+  margin: auto;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 10px 12px 11px;
+}
+
+.time {
+  font-weight: bold;
+  color: #4F4F4F;
+  font-size: 11.5px;
+  line-height: 15px;
+  margin: 0;
+}
+
+.vs {
+  font-weight: 500;
+  font-size: 12.35px;
+  line-height: 16px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.type {
+  margin: 0;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.fc {
+  margin: auto 0;
+}
+
+.fc img:first-child {
+  position: relative;
+  left: 15px;
+  z-index: 0;
+}
+
+.fc img:last-child {
+  position: relative;
+  z-index: 5;
+}
+
+.notifications {
+  background-color: #EEEEEE;
+  font-size: 13px;
+  line-height: 17px;
+  padding: 9px 0 7px 11px;
+}
+
+.notifications p {
+  margin: 0;
+  color: #4F4F4F;
+}
+
+.video {
+  display: block;
+  margin: 0 auto;
+  margin-top: -20px;
+  z-index: 1;
+  width: 70%;
+  max-width: 360px;
+  position: relative;
+  right: -50px;
+}
+
+.get_started_container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  align-content: space-between;
+  overflow: hidden;
+}
+
+.get_started {
+  margin: 0;
+}
+
+.subscribe_info {
+  text-align: center;
+  padding: 62px 20px 22px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subscribe {
+  margin-bottom: 25px;
+}
+
+.get_started_heading {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 37px;
+  color: #333;
+}
+
+.app_image {
+  position: relative;
+  margin-top: 100px;
+}
+
+.mobile_img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  right: 15px;
+  z-index: 2;
+}
+
+.bell_icon {
+  position: absolute;
+  left: 30%;
+  top: 40px;
+}
+
+.basket_icon {
+  position: absolute;
+  right: 30%;
+  top: 200px;
+}
+
+.ellipse1 {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+  position: absolute;
+  width: 318px;
+  height: 318px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.ellipse2 {
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  position: absolute;
+  width: 473px;
+  height: 473px;
+  opacity: 1;
+  width: auto;
+  z-index: 1;
+}
+
+.ellipse3 {
+  left: 50%;
+  transform: translateX(-50%);
+  top: -130px;
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.ellipse4 {
+  left: 43%;
+  transform: translateX(-50%);
+  top: -190px;
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  opacity: 0.1;
+}
+
+.ellipse5 {
+  left: 43%;
+  transform: translateX(-50%);
+  top: -290px;
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  opacity: 0.1;
+}
+
+.ellipse6 {
+  left: 43%;
+  transform: translateX(-50%);
+  top: -390px;
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  opacity: 0.1;
+}
+
+.ellipse7 {
+  left: 43%;
+  transform: translateX(-50%);
+  top: -490px;
+  position: absolute;
+  width: 1400px;
+  height: 1400px;
+  opacity: 0.1;
+}
+
+.ellipse8 {
+  left: 43%;
+  transform: translateX(-50%);
+  top: -590px;
+  position: absolute;
+  width: 1600px;
+  height: 1600px;
+  opacity: 0.1;
+}
+
+.ellipse9 {
+  left: 43%;
+  transform: translateX(-50%);
+  top: -690px;
+  position: absolute;
+  width: 1800px;
+  height: 1800px;
+  opacity: 0.1;
+}
+
+.ellipse10 {
+  left: 43%;
+  transform: translateX(-50%);
+  top: -790px;
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  opacity: 0.1;
+}
+
+.features {
+  padding: 42px 25px 69px 25px;
+  background-color: #fafafa;
+}
+
+.features_heading {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 37px;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+.features_container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.features_blocks {
+  padding-top: 55px;
+}
+
+.feature_explanation {
+  font-size: 16px;
+  line-height: 23px;
+  color: #4f4f4f;
+  text-align: center;
+}
+
+.features_image {
+  display: block;
+  margin: 0 auto;
+}
+
+.feedbacks {
+  padding: 50px 25px 70px 25px;
+}
+
+.feedbacks_heading {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 37px;
+  color: #333;
+  text-align: center;
+}
+
+.carousel {
+  text-align: center;
+}
+
+.featured_in {
+  padding: 57px 0 71px 0;
+  background-color: #fafafa;
+}
+
+.featured_in_heading {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 37px;
+  color: #333;
+  text-align: center;
+}
+
+.featured_in_companies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featured_in_companies img {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+
+.download_app {
+  display: flex;
+  flex-direction: column;
+}
+
+.download_app_info {
+  padding: 20px 20px 0 20px;
+}
+
+.download_app_info_heading {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 37px;
+  color: #333;
+  text-align: center;
+}
+
+.download_app_info_content {
+  font-size: 16px;
+  line-height: 25px;
+  color: #4f4f4f;
+  text-align: center;
+}
+
+.download_app_image {
+  width: 100%;
+  margin-top: 46px;
+}
+
+.store_links_2 {
+  text-align: center;
+}
+
+.store_links_2 a:first-child {
+  margin-right: 30px;
+}
+
+.footer {
+  background-color: #00ADEE;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px 45px 20px;
+}
+
+.socials {
+  margin-top: 11px;
+  margin-bottom: 32px;
+}
+
+.socials a {
+  margin-right: 17px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  margin-right: 20px;
+}
+
+.links a:last-child {
+  margin-right: 0;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .header_inner p,
+.store_links {
+    text-align: left;
+  }
+
+  .achieve_status {
+    font-size: 18px;
+  }
+
+  .header {
+    background-image: url(images/header_background.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: top right;
+    padding: 20px 0 10px 40px;
+    height: 50%;
+  }
+
+  .header_inner {
+    max-width: 70%;
+    transform: scale(0.7);
+    position: relative;
+    bottom: 80px;
+    right: 100px;
+  }
+
+  .logo img {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  .information {
+    flex-direction: row;
+    background-image: url(images/ronaldo_desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .about {
+    flex: 45%;
+    order: 2;
+    padding: 80px 20px 60px 0;
+    text-align: left;
+  }
+
+  .frames {
+    flex: 55%;
+    order: 1;
+    background-image: none;
+  }
+
+  .features {
+    background-color: #00ADEE;
+  }
+
+  .features_heading {
+    color: #fff;
+  }
+
+  .features_container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .features_image {
+    width: 38px;
+    height: 38px;
+  }
+
+  .feature_explanation {
+    text-align: left;
+    color: #fff;
+  }
+
+  .video_icon {
+    content: url(images/video_desktop.svg);
+  }
+
+  .notification_icon {
+    content: url(images/notification_desktop.svg);
+  }
+
+  .hd_icon {
+    content: url(images/hd_desktop.svg);
+  }
+
+  .flag_icon {
+    content: url(images/flag_desktop.svg);
+  }
+
+  .multitasking {
+    content: url(images/multitasking_desktop.svg);
+  }
+
+  .rating_icon {
+    content: url(images/rating_desktop.svg);
+  }
+
+  .vildprinter_icon {
+    content: url(images/vildprinter_desktop.svg);
+  }
+
+  .match_info_icon {
+    content: url(images/match_info_desktop.svg);
+  }
+
+  .status_icon {
+    content: url(images/status_desktop.svg);
+  }
+}
+@media (min-width: 940px) and (max-width: 1023px) {
+  .get_started_container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 40px;
+  }
+
+  .subscribe_info,
+.app_image {
+    flex: 30%;
+  }
+
+  .download_app {
+    flex-direction: row;
+  }
+
+  .download_app_image {
+    display: none;
+  }
+
+  .download_app {
+    background-image: url(images/footer_background.svg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 57%;
+  }
+
+  .download_app_info {
+    max-width: 50%;
+    transform: translateX(100%);
+    padding: 40px;
+  }
+
+  .download_app_info_heading,
+.download_app_info_content {
+    text-align: left;
+  }
+
+  .store_links_2 {
+    text-align: left;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footer_logo {
+    order: 1;
+  }
+
+  .socials {
+    margin: 0;
+    order: 3;
+  }
+
+  .links {
+    order: 2;
+  }
+
+  .subscribe_info {
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    background-image: url(images/header_background.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding-bottom: 164px;
+  }
+
+  .header_inner p,
+.store_links {
+    text-align: left;
+  }
+
+  .logo img {
+    margin: 0;
+    margin-bottom: 133px;
+  }
+
+  .header_inner {
+    max-width: 40%;
+  }
+
+  .information {
+    flex-direction: row;
+    background-image: url(images/ronaldo_desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .about {
+    order: 2;
+    flex: 40%;
+    padding: 80px 80px 60px 0px;
+    text-align: left;
+  }
+
+  .frames {
+    order: 1;
+    flex: 60%;
+    background-image: none;
+  }
+
+  .get_started_container {
+    flex-direction: row;
+  }
+
+  .subscribe_info,
+.app_image {
+    flex: 50%;
+  }
+
+  .features {
+    background-color: #00ADEE;
+  }
+
+  .features_container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    justify-content: space-evenly;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
+  .features_heading {
+    color: #fff;
+  }
+
+  .features_image {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+  }
+
+  .feature_explanation {
+    text-align: left;
+    color: #fff;
+  }
+
+  .video_icon {
+    content: url(images/video_desktop.svg);
+  }
+
+  .notification_icon {
+    content: url(images/notification_desktop.svg);
+  }
+
+  .hd_icon {
+    content: url(images/hd_desktop.svg);
+  }
+
+  .flag_icon {
+    content: url(images/flag_desktop.svg);
+  }
+
+  .multitasking {
+    content: url(images/multitasking_desktop.svg);
+  }
+
+  .rating_icon {
+    content: url(images/rating_desktop.svg);
+  }
+
+  .vildprinter_icon {
+    content: url(images/vildprinter_desktop.svg);
+  }
+
+  .match_info_icon {
+    content: url(images/match_info_desktop.svg);
+  }
+
+  .status_icon {
+    content: url(images/status_desktop.svg);
+  }
+
+  .download_app {
+    flex-direction: row;
+  }
+
+  .download_app {
+    flex-direction: row;
+  }
+
+  .download_app_image {
+    display: none;
+  }
+
+  .download_app {
+    background-image: url(images/footer_background.svg);
+    background-position: bottom left;
+    background-size: 50%;
+    background-repeat: no-repeat;
+  }
+
+  .download_app_info {
+    max-width: 50%;
+    transform: translateX(100%);
+    padding: 60px;
+  }
+
+  .download_app_info_heading,
+.download_app_info_content {
+    text-align: left;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footer_logo {
+    order: 1;
+  }
+
+  .socials {
+    margin: 0;
+    order: 3;
+  }
+
+  .links {
+    order: 2;
+  }
+
+  .subscribe_info {
+    text-align: left;
+    padding-left: 60px;
+  }
+}
+@media (min-width: 1224px) {
+  .header_inner {
+    max-width: 1224px;
+    margin: 0 auto;
+  }
+
+  .desktop {
+    max-width: 50%;
+  }
+
+  .features_container {
+    grid-gap: 90px;
+  }
+
+  .about {
+    padding: 80px 160px 60px 0px;
+  }
+
+  .get_started_container {
+    padding-bottom: 50px;
+    padding-left: 120px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
