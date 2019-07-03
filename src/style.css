@@ -225,14 +225,30 @@ body {
 
 .bell_icon {
   position: absolute;
-  left: 30%;
-  top: 40px;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-150%);
+  z-index: 4;
+  width: 101px;
+  height: 101px;
 }
 
 .basket_icon {
   position: absolute;
-  right: 30%;
-  top: 200px;
+  left: 50%;
+  top: 260px;
+  transform: translateX(55%);
+  z-index: 4;
+  width: 101px;
+  height: 101px;
+}
+
+.circle_icon {
+  position: absolute;
+  left: 50%;
+  top: 330px;
+  transform: translateX(-350%);
+  z-index: 4;
 }
 
 .ellipse1 {
@@ -392,7 +408,6 @@ body {
 }
 
 .carousel_blocks {
-  max-width: 309px !important;
   height: 161px;
   border: 1px solid #828282;
   border-radius: 4px;
@@ -643,6 +658,24 @@ body {
     padding-left: 40px;
   }
 
+  .mobile_img {
+    content: url(images/app_image.svg);
+  }
+
+  .bell_icon {
+    width: 121px;
+    height: 121px;
+    transform: translateX(-130%);
+  }
+
+  .basket_icon {
+    content: url(images/enter_icon.svg);
+    width: 121px;
+    height: 121px;
+    transform: translateX(45%);
+    top: 280px;
+  }
+
   .subscribe_info,
 .app_image {
     flex: 30%;
@@ -699,6 +732,15 @@ body {
   .subscribe_info {
     text-align: left;
   }
+
+  .carousel_blocks {
+    max-width: 309px;
+  }
+
+  .slick-initialized .slick-slide {
+    display: flex !important;
+    justify-content: center;
+  }
 }
 @media (min-width: 1024px) {
   .header {
@@ -744,6 +786,24 @@ body {
 
   .get_started_container {
     flex-direction: row;
+  }
+
+  .mobile_img {
+    content: url(images/app_image.svg);
+  }
+
+  .bell_icon {
+    width: 121px;
+    height: 121px;
+    transform: translateX(-130%);
+  }
+
+  .basket_icon {
+    content: url(images/enter_icon.svg);
+    width: 121px;
+    height: 121px;
+    transform: translateX(45%);
+    top: 280px;
   }
 
   .subscribe_info,
@@ -873,7 +933,7 @@ body {
     margin: 0 auto;
   }
 
-  .desktop {
+  .header_desktop {
     max-width: 50%;
   }
 
@@ -888,6 +948,30 @@ body {
   .get_started_container {
     padding-bottom: 50px;
     padding-left: 120px;
+  }
+}
+@media (max-width: 640px) {
+  .carousel_blocks {
+    max-width: 309px;
+    margin: 0 auto;
+  }
+
+  .slick-initialized .slick-slide {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .slick-next {
+    position: relative;
+    left: 85%;
+  }
+
+  .slick-prev {
+    display: none !important;
+  }
+
+  .mobile_img {
+    height: 470px;
   }
 }
 
