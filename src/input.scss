@@ -54,7 +54,7 @@ body {
 }
 
 .header {
-  background-color: #F4F6F9;;
+  background-color: #F4F6F9;
 }
 
 .header_inner {
@@ -125,6 +125,12 @@ body {
   font-weight: bold;
   @include paragraphSize(16px, 21px);
   color: $primaryColor;
+  transition: 2s;
+}
+
+.learn_more:hover {
+  text-transform: uppercase;
+  text-shadow: 1px 2px 10px #7e7d7d; 
 }
 
 .frames {
@@ -194,6 +200,8 @@ body {
     background-color: #EEEEEE;
     @include paragraphSize(13px, 17px);
     padding: 9px 0 7px 11px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .notifications p {
@@ -201,12 +209,66 @@ body {
     color: #4F4F4F;
 }
 
+.notifications form {
+  position: absolute;
+  right: 18px;
+}
+
+#turn_notifications {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  right: 8px;
+  top: 0px;
+  z-index: 2;
+  margin: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  height: 8px;
+  width: 18px;
+  background-color: #979797;
+  border-radius: 71.9927px;
+  z-index: 1;
+}
+
+.checkmark::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  box-shadow: 0px 2.09791px 2.09791px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  top: -3px;
+  right: 5px;
+}
+
+#turn_notifications:checked ~ .checkmark::before {
+  animation-name: turnOn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes turnOn {
+  from {
+    top: -3px;
+    right: 5px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
 .video {
     display: block; 
-    
     margin: 0 auto;
     margin-top: -20px;
-    // margin-left: 20%;
     z-index: 1;
     width: 70%;
     max-width: 360px;
@@ -233,6 +295,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
 }
 
 .subscribe {
@@ -254,6 +317,8 @@ body {
   position: relative;
   right: 15px;
   z-index: 2;
+  width: 287px;
+  height: 496px;
 }
 
 .bell_icon {
@@ -284,35 +349,24 @@ body {
   z-index: 4;
 }
 
+.ellipse {
+  z-index: 1;
+}
+
 .ellipse1 {
   @include ellipses(50%, 60px, translateX(-50%), absolute, 318px, 318px, 1);
-  // left: 50%;
-  // transform: translateX(-50%);
-  // position: absolute;
-  // top: 60px;
   z-index: 1;
 }
 
 .ellipse2 {
   @include ellipses(50%, -20px, translateX(-50%), absolute, 473px, 473px, 1);
-  // top: -20px;
-  // position: absolute;
-  // left: 50%;
-  // transform: translateX(-50%);
   width: auto;
   z-index: 1;
 }
 
 .ellipse3 {
   @include ellipses(50%, -130px, translateX(-50%), absolute, 700px, 700px, 0.1);
-  // top: -130px;
-  // position: absolute;;
-  // left: 50%;
-  // transform: translateX(-50%);
-  // width: 700px;
-  // height: 700px;
   z-index: 1;
-  // opacity: 0.2;
 }
 
 .ellipse4 {
@@ -366,6 +420,7 @@ body {
 .feature_explanation {
   @include textParagraphs($paragraphFontSize, $paragraphLineHeight, $paragraphColor);
   text-align: center;
+  margin-bottom: 0;
 }
 
 .features_image {
@@ -498,6 +553,32 @@ body {
 
 .socials a {
   margin-right: 17px;
+  position: relative;
+}
+
+.socials a img {
+  transition: 1s;
+}
+
+.socials a:hover img {
+  transform: translateY(-0.3em);
+}
+
+.socials a::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 30%;
+  width: 10px;
+  height: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  display: none;
+}
+
+.socials a:hover::after {
+  display: block;
 }
 
 .links a {
@@ -506,10 +587,15 @@ body {
   font-weight: bold;
   @include paragraphSize(16px, 21px);
   margin-right: 20px;
+  transition: 1s;
 }
 
 .links a:last-child {
   margin-right: 0;
+}
+
+.links a:hover {
+  text-shadow: 1px 2px 10px #333; 
 }
 
 
@@ -800,6 +886,12 @@ body {
 
   .features_heading {
     color: #fff;
+    margin-top: 34px;
+    margin-bottom: 38px;
+  }
+
+  .features_blocks {
+    padding-top: 20px;
   }
 
   .features_image {
@@ -879,6 +971,10 @@ body {
     text-align: left;
   }
 
+  .store_links_2 {
+    text-align: left;
+  }
+
   .footer {
     flex-direction: row;
     justify-content: space-evenly;
@@ -914,7 +1010,8 @@ body {
   }
 
   .features_container {
-    grid-gap: 90px;
+    grid-row-gap: 30px;
+    grid-column-gap: 90px;
   }
 
   .about {
