@@ -38,12 +38,6 @@ $paragraphColor: #4f4f4f;
   opacity: $opacity;
 }
 
-// @mixin feedback($fontSize, $lineHeight, $Color) {
-//   font-size: $fontSize;
-//   line-height: $lineHeight;
-//   color: $Color;
-// } 
-
 body {
     margin: 0;
     font-family: $fontFamilly;
@@ -57,41 +51,39 @@ body {
   background-color: #F4F6F9;
 }
 
-.header_inner {
+.header__inner {
   padding: 0 20px;
   padding-top: 32px;
   padding-bottom: 60px;
 }
 
-.header_inner p {
+.header__inner p {
   text-align: center;
 }
 
-.logo img {
+.header__logo img {
   display: block;
   margin: 0 auto;
   margin-bottom: 86px;
 }
 
-.store_links {
-  text-align: center;
-  // display: flex;
-  // justify-content: space-between;
-}
-
-.store_links a:first-child {
-  margin-right: 30px;
-}
-
-.heading {
+.header__heading {
   font-weight: bold;
   @include paragraphSize(30px, 40px);
 }
 
-.achieve_status {
+.header__achieve_status {
   margin-bottom: 50px;
   margin-top: 33px;
   @include textParagraphs($paragraphFontSize, $paragraphLineHeight, $paragraphColor);
+}
+
+.header__store_links {
+  text-align: center;
+}
+
+.header__store_links a:first-child {
+  margin-right: 30px;
 }
 
 .information {
@@ -99,28 +91,29 @@ body {
   flex-direction: column;
 }
 
-.about {
+.information__about {
   padding: 54px 20px 22px 20px;
   text-align: center;
 }
 
-.what_it_does,
-.get_started {
+.information__what_it_does,
+.start {
   font-weight: bold;
   @include paragraphSize(16px, 21px);
   color: $primaryColor;
 }
 
-.football_exp {
+.information__football_exp {
   @include headings($headingsFontWeight, $headingsFontSize, $headingsLineHeight, $headingsColor);
 }
 
-.app_purpose,
+.information__app_purpose,
 .subscribe {
   @include textParagraphs($paragraphFontSize, $paragraphLineHeight, $paragraphColor);
 }
 
-.learn_more {
+.information__learn_more,
+.get_started__learn_more {
   text-decoration: none;
   font-weight: bold;
   @include paragraphSize(16px, 21px);
@@ -128,12 +121,13 @@ body {
   transition: 2s;
 }
 
-.learn_more:hover {
+.information__learn_more:hover,
+.get_started__learn_more:hover {
   text-transform: uppercase;
   text-shadow: 1px 2px 10px #7e7d7d; 
 }
 
-.frames {
+.information__frames {
     background: url(images/Ronaldo_mobile.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -276,7 +270,7 @@ body {
     right: -50px;
 }
 
-.get_started_container {
+.get_started {
   display: flex;
   flex-direction: column;
   padding-bottom: 50px;
@@ -284,7 +278,7 @@ body {
   overflow: hidden;
 }
 
-.get_started {
+.get_started__heading {
   margin: 0;
 }
 
@@ -302,7 +296,7 @@ body {
   margin-bottom: 25px;
 }
 
-.get_started_heading {
+.get_started__heading {
   @include headings($headingsFontWeight, $headingsFontSize, $headingsLineHeight, $headingsColor);
 }
 
@@ -321,7 +315,7 @@ body {
   height: 496px;
 }
 
-.bell_icon {
+.app_image__bell_icon {
   position: absolute;
   left: 50%;
   top: 10px;
@@ -331,7 +325,7 @@ body {
   height: 101px;
 }
 
-.basket_icon {
+.app_image__basket_icon {
   position: absolute;
   left: 50%;
   top: 260px;
@@ -341,7 +335,7 @@ body {
   height: 101px;
 }
 
-.circle_icon {
+.app_image__circle_icon {
   position: absolute;
   left: 50%;
   top: 330px;
@@ -349,7 +343,7 @@ body {
   z-index: 4;
 }
 
-.ellipse {
+.app_image__ellipse {
   z-index: 1;
 }
 
@@ -402,18 +396,18 @@ body {
   background-color: #fafafa;
 }
 
-.features_heading {
+.features__heading {
   @include headings($headingsFontWeight, $headingsFontSize, $headingsLineHeight, $headingsColor);
   text-align: center;
   margin: 0;
 }
 
-.features_container {
+.features__container {
   display: grid;
   grid-template-columns: auto;
 }
 
-.features_blocks {
+.features__blocks {
   padding-top: 55px;
 }
 
@@ -423,7 +417,7 @@ body {
   margin-bottom: 0;
 }
 
-.features_image {
+.features__image {
   display: block;
   margin: 0 auto;
 }
@@ -432,7 +426,7 @@ body {
   padding: 50px 25px 70px 25px;
 }
 
-.feedbacks_heading {
+.feedbacks__heading {
   @include headings($headingsFontWeight, $headingsFontSize, $headingsLineHeight, $headingsColor);
   text-align: center;
 }
@@ -442,21 +436,19 @@ body {
   margin: 0 auto;
 }
 
-.carousel_blocks {
-  // max-width: 309px !important;
+.carousel__blocks {
   height: 161px;
   border: 1px solid #828282;
   border-radius: 4px;
-  padding: 15px; //check
-  
+  padding: 15px;
 }
 
-.carousel_blocks_inner {
+.carousel_blocks__inner {
   display: flex;
 }
 
 .slick-slide {
-  margin: 20px; //check
+  margin: 20px;
 }
 
 .slick-next,
@@ -489,18 +481,18 @@ body {
   background-color: #fafafa;
 }
 
-.featured_in_heading {
+.featured_in__heading {
   @include headings($headingsFontWeight, $headingsFontSize, $headingsLineHeight, $headingsColor);
   text-align: center;
 }
 
-.featured_in_companies {
+.featured_in__companies {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.featured_in_companies img {
+.featured_in__companies img {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 40px;
@@ -511,31 +503,31 @@ body {
   flex-direction: column;
 }
 
-.download_app_info {
+.download_app__info {
   padding: 20px 20px 0 20px;
 }
 
-.download_app_info_heading {
+.download_app__heading {
   @include headings($headingsFontWeight, $headingsFontSize, $headingsLineHeight, $headingsColor);
   text-align: center;
 }
 
-.download_app_info_content {
+.download_app__content {
   @include paragraphSize(16px, 25px);
   color: #4f4f4f;
   text-align: center;
 }
 
-.download_app_image {
+.download_app__image {
   width: 100%;
   margin-top: 46px;
 }
 
-.store_links_2 {
+.download_app__store_links {
   text-align: center;
 }
 
-.store_links_2 a:first-child {
+.download_app__store_links a:first-child {
   margin-right: 30px;
 }
 
@@ -546,25 +538,25 @@ body {
   padding: 40px 20px 45px 20px;
 }
 
-.socials {
+.footer__socials {
   margin-top: 11px;
   margin-bottom: 32px;
 }
 
-.socials a {
+.footer__socials a {
   margin-right: 17px;
   position: relative;
 }
 
-.socials a img {
+.footer__socials a img {
   transition: 1s;
 }
 
-.socials a:hover img {
+.footer__socials a:hover img {
   transform: translateY(-0.3em);
 }
 
-.socials a::after {
+.footer__socials a::after {
   content: '';
   position: absolute;
   top: 15px;
@@ -577,11 +569,11 @@ body {
   display: none;
 }
 
-.socials a:hover::after {
+.footer__socials a:hover::after {
   display: block;
 }
 
-.links a {
+.footer__links a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -590,22 +582,22 @@ body {
   transition: 1s;
 }
 
-.links a:last-child {
+.footer__links a:last-child {
   margin-right: 0;
 }
 
-.links a:hover {
+.footer__links a:hover {
   text-shadow: 1px 2px 10px #333; 
 }
 
 
 @media (min-width: 640px) and (max-width: 1023px) {
-   .header_inner p,
-   .store_links {
+   .header__inner p,
+   .header__store_links {
      text-align: left;
    }
 
-   .achieve_status {
+   .header__achieve_status {
      font-size: 18px;
    }
 
@@ -618,7 +610,7 @@ body {
      height: 50%;
    }
 
-   .header_inner {
+   .header__inner {
      max-width: 70%;
      transform: scale(0.7);
      position: relative;
@@ -626,7 +618,7 @@ body {
      right: 100px;
    }
 
-   .logo img {
+   .header__logo img {
      margin: 0;
      margin-bottom: 60px;
    }
@@ -638,14 +630,14 @@ body {
     background-size: cover;
   }
 
-   .about {
+   .information__about {
      flex: 45%;
      order: 2;
      padding: 80px 20px 60px 0;
      text-align: left;
    }
 
-   .frames {
+   .information__frames {
      flex: 55%;
      order: 1;
      background-image: none;
@@ -655,16 +647,16 @@ body {
      background-color: $primaryColor;
    }
 
-   .features_heading {
+   .features__heading {
      color: #fff;
    }
 
-   .features_container {
+   .features__container {
      grid-template-columns: 1fr 1fr;
      grid-gap: 10px;
    }
 
-   .features_image {
+   .features__image {
      width: 38px;
      height: 38px;
    }
@@ -712,7 +704,7 @@ body {
 }
 
 @media (min-width: 940px) and (max-width: 1023px) {
-  .get_started_container {
+  .get_started {
     flex-direction: row;
     justify-content: space-evenly;
     padding-left: 40px;
@@ -722,13 +714,13 @@ body {
     content: url(images/app_image.svg);
   }
 
-  .bell_icon {
+  .app_image__bell_icon {
     width: 121px;
     height: 121px;
     transform: translateX(-130%);
   }
 
-  .basket_icon {
+  .app_image__basket_icon {
     content: url(images/enter_icon.svg);
     width: 121px;
     height: 121px;
@@ -745,7 +737,7 @@ body {
     flex-direction: row;
   }
 
-  .download_app_image {
+  .download_app__image {
     display: none;
   }
 
@@ -756,18 +748,18 @@ body {
     background-size: 57%;
   }
 
-  .download_app_info {
+  .download_app__info {
     max-width: 50%;
     transform: translateX(100%);
     padding: 40px;
   }
 
-  .download_app_info_heading,
-  .download_app_info_content {
+  .download_app__heading,
+  .download_app__content {
     text-align: left;
   }
 
-  .store_links_2 {
+  .download_app__store_links {
     text-align: left;
   }
 
@@ -776,16 +768,16 @@ body {
     justify-content: space-evenly;
   }
 
-  .footer_logo {
+  .footer__logo {
     order: 1;
   }
 
-  .socials {
+  .footer__socials {
     margin: 0;
     order: 3;
   }
 
-  .links {
+  .footer__links {
     order: 2;
   }
 
@@ -793,7 +785,7 @@ body {
     text-align: left;
   }
 
-  .carousel_blocks {
+  .carousel__blocks {
     max-width: 309px;
   }
 
@@ -811,17 +803,17 @@ body {
     padding-bottom: 164px;
   }
 
-  .header_inner p,
-  .store_links {
+  .header__inner p,
+  .header__store_links {
     text-align: left;
   }
 
-  .logo img {
+  .header__logo img {
     margin: 0;
     margin-bottom: 133px;
   }
 
-  .header_inner {
+  .header__inner {
     max-width: 40%;
   }
 
@@ -832,20 +824,20 @@ body {
     background-size: cover;
   }
 
-  .about {
+  .information__about {
     order: 2;
     flex: 40%;
     padding: 80px 80px 60px 0px;
     text-align: left;
   }
 
-  .frames {
+  .information__frames {
     order: 1;
     flex: 60%;
     background-image: none;
   }
 
-  .get_started_container {
+  .get_started {
     flex-direction: row;
   }
 
@@ -853,13 +845,13 @@ body {
     content: url(images/app_image.svg);
   }
 
-  .bell_icon {
+  .app_image__bell_icon {
     width: 121px;
     height: 121px;
     transform: translateX(-130%);
   }
 
-  .basket_icon {
+  .app_image__basket_icon {
     content: url(images/enter_icon.svg);
     width: 121px;
     height: 121px;
@@ -876,7 +868,7 @@ body {
     background-color: $primaryColor;
   }
 
-  .features_container {
+  .features__container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
     justify-content: space-evenly;
@@ -884,17 +876,17 @@ body {
     margin: 0 auto;
   }
 
-  .features_heading {
+  .features__heading {
     color: #fff;
     margin-top: 34px;
     margin-bottom: 38px;
   }
 
-  .features_blocks {
+  .features__blocks {
     padding-top: 20px;
   }
 
-  .features_image {
+  .features__image {
     width: 38px;
     height: 38px;
     margin: 0;
@@ -949,7 +941,7 @@ body {
     flex-direction: row;
   }
 
-  .download_app_image {
+  .download_app__image {
     display: none;
   }
 
@@ -960,18 +952,18 @@ body {
     background-repeat: no-repeat;
   }
 
-  .download_app_info {
+  .download_app__info {
     max-width: 50%;
     transform: translateX(100%);
     padding: 60px;
   }
 
-  .download_app_info_heading,
-  .download_app_info_content {
+  .download_app__heading,
+  .download_app__content {
     text-align: left;
   }
 
-  .store_links_2 {
+  .download_app__store_links {
     text-align: left;
   }
 
@@ -980,16 +972,16 @@ body {
     justify-content: space-evenly;
   }
 
-  .footer_logo {
+  .footer__logo {
     order: 1;
   }
 
-  .socials {
+  .footer__socials {
     margin: 0;
     order: 3;
   }
 
-  .links {
+  .footer__links {
     order: 2;
   }
 
@@ -1000,32 +992,32 @@ body {
 }
 
 @media (min-width: 1224px) {
-  .header_inner {
+  .header__inner {
     max-width: 1224px;
     margin: 0 auto;
   }
 
-  .header_desktop {
+  .header__desktop_size {
     max-width: 50%;
   }
 
-  .features_container {
+  .features__container {
     grid-row-gap: 30px;
     grid-column-gap: 90px;
   }
 
-  .about {
+  .information__about {
     padding: 80px 160px 60px 0px;
   }
 
-  .get_started_container {
+  .get_started {
     padding-bottom: 50px;
     padding-left: 120px;
   }
 }
 
 @media (max-width: 640px) {
-  .carousel_blocks {
+  .carousel__blocks {
     max-width: 309px;
     margin: 0 auto;
   }
